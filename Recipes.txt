@@ -26,10 +26,10 @@ public class Student {
 		rem =0;
 		ans=0;
 		
-		while (n1 > 0) {
-			rem = n1 % 10;
+		while (i > 0) {
+			rem = i % 10;
 			ans = ans + (int) (Math.pow(rem, d));
-			n1 /= 10;
+			i /= 10;
 
 		}
 		if(ans==temp) {
