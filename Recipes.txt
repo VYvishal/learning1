@@ -1,7 +1,60 @@
 
+package oop1;
 
-welcome to new Kitchen!
+import java.util.Scanner;
 
-Pasts
-Samosa
-chole bhature
+public class Student {
+
+	public static void main(String[] args) {
+   
+	Scanner sc = new Scanner(System.in);
+	int N1 = sc.nextInt();
+	int N2 = sc.nextInt();
+	IsArmstrongNumber(N1, N2);
+
+	}
+
+	public static void IsArmstrongNumber(int n1, int n2) {
+		int ans=0;
+		int rem=0;
+		int temp=0;
+		
+		for(int i=n1; i<=n2; i++) {
+		 int d = countofdigit(i);
+		 System.out.println(d);
+		temp=i;
+		rem =0;
+		ans=0;
+		
+		while (n1 > 0) {
+			rem = n1 % 10;
+			ans = ans + (int) (Math.pow(rem, d));
+			n1 /= 10;
+
+		}
+		if(ans==temp) {
+			System.out.println(i);
+		}else {
+			System.out.println("not");
+		}
+		}
+		
+
+	}
+
+	public static int countofdigit(int n1) {
+
+		int c = 0;
+		while (n1 > 0) {
+
+			n1 /= 10;
+			c++;
+		}
+
+		return c;
+
+	}
+
+}
+
+
